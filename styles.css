@@ -1300,3 +1300,255 @@ body.about-page main {
     color: rgba(255, 255, 255, 0.6);
     line-height: 1.6;
 }
+
+/* =========================================
+   ABOUT US PAGE STYLES (Scoped)
+   ========================================= */
+
+.about-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 0;
+}
+
+.about-hero h1,
+.about-history h2,
+.about-awards h2,
+.about-security h2,
+.mission-vision h2,
+.about-awards h3,
+.mission-vision h3,
+.values-grid h4 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-hero p,
+.about-history p,
+.about-awards p,
+.about-security p,
+.mission-vision p,
+.highlight-list li {
+    font-family: 'Inter', sans-serif;
+}
+
+.center {
+    text-align: center;
+}
+
+/* HERO */
+.about-hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://placehold.co/1920x600?text=Hero+Image') center/cover no-repeat;
+    position: relative;
+}
+
+.about-hero .overlay {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* GRID GENERAL */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-grid img {
+    width: 100%;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+}
+
+.reverse {
+    direction: rtl;
+}
+
+.reverse div {
+    direction: ltr;
+}
+
+/* TAG */
+.section-tag {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* AWARDS */
+.about-awards {
+    background: var(--bg-body);
+    padding: 100px 0;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.card {
+    background: var(--bg-surface);
+    padding: 30px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-fast);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
+}
+
+.card h3 {
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.card h3 i {
+    color: var(--primary);
+    /* Icon color */
+}
+
+/* SECURITY LIST */
+.highlight-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.highlight-list li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.05rem;
+    color: var(--text-main);
+}
+
+.highlight-list li i {
+    color: var(--secondary);
+    /* Checkmark color */
+}
+
+/* MISSION & VISION */
+.mission-vision {
+    background: #111827;
+    /* Dark theme background */
+    color: white;
+    padding: 100px 0;
+}
+
+.mv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.mv-card,
+.mv-card-dark {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition-fast);
+}
+
+.mv-card:hover,
+.mv-card-dark:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-5px);
+}
+
+.mv-card h3,
+.mv-card-dark h3 {
+    color: var(--secondary-light);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+}
+
+.values-title {
+    margin-top: 80px;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.values-grid,
+.values-grid-dark {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.value-item,
+.value-item-dark {
+    text-align: center;
+    padding: 20px;
+}
+
+.value-item .icon,
+.value-item-dark .icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--primary);
+    background: rgba(255, 255, 255, 0.05);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.value-item h4,
+.value-item-dark h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.value-item p,
+.value-item-dark p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+
+    .about-grid,
+    .mv-grid,
+    .cards,
+    .values-grid,
+    .values-grid-dark {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .mv-grid {
+        gap: 30px;
+    }
+}
