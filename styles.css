@@ -1023,195 +1023,280 @@ textarea.form-control {
 }
 
 /* =========================================
-   ABOUT US PAGE STYLES (REDESIGNED)
+   ABOUT US PAGE STYLES (USER DESIGN IMPL)
    ========================================= */
 
-.about-header {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 4rem;
-}
-
-.about-row {
+/* Hero Section */
+.about-hero {
+    height: 60vh;
+    min-height: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/hero-about.jpg') center/cover no-repeat;
+    /* Fallback if image missing */
+    background-color: #2c3e50;
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 4rem;
-    margin-bottom: 5rem;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: -80px;
+    /* Counteract main padding if needed, or adjust structure */
 }
 
-.about-row.reverse {
-    flex-direction: row-reverse;
+/* Adjust main padding for this page if using full width hero */
+body.about-page main {
+    padding-top: 0;
 }
 
-.about-text {
-    flex: 1;
+.about-hero .overlay {
+    max-width: 800px;
+    padding: 2rem;
 }
 
-.about-text h2 {
-    font-size: 2rem;
-    color: var(--secondary-dark);
-    margin-bottom: 1.5rem;
+.about-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.1;
 }
 
-.about-text p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--text-muted);
-    margin-bottom: 1.5rem;
-    text-align: justify;
+.about-hero p {
+    font-size: 1.25rem;
+    opacity: 0.9;
 }
 
-.about-img {
-    flex: 1;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow-lg);
-    height: 400px;
+/* General Grid */
+.about-history,
+.about-security {
+    padding: 100px 0;
 }
 
-.about-img img {
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+@media (min-width: 992px) {
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.about-grid img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+    border-radius: 16px;
+    box-shadow: var(--shadow-xl);
+    transition: transform 0.3s ease;
 }
 
-.about-img:hover img {
-    transform: scale(1.05);
+.about-grid img:hover {
+    transform: scale(1.02);
 }
 
-@media (max-width: 992px) {
-    .about-row {
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .about-row.reverse {
-        flex-direction: column;
-    }
-
-    .about-img {
-        width: 100%;
-        height: 300px;
-    }
+.about-grid.reverse {
+    direction: rtl;
 }
 
-/* Mission, Vision & Values Container */
-.mv-values-section {
-    background-color: #F8FAFC;
-    padding: 5rem 0;
-    border-radius: var(--radius-lg);
-    margin-bottom: 5rem;
+.about-grid.reverse>div {
+    direction: ltr;
+}
+
+/* Section Tag */
+.section-tag {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.about-history h2,
+.about-security h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-dark);
+    line-height: 1.2;
+}
+
+.about-history p,
+.about-security p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+/* Awards Section */
+.about-awards {
+    background: #f8fafc;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.about-awards h2 {
+    font-size: 2.5rem;
+    color: var(--text-main);
+    margin-bottom: 3rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card-award {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+    text-align: center;
+}
+
+.card-award:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-award h3 {
+    font-size: 1.25rem;
+    color: var(--secondary-dark);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.card-award i {
+    color: #FFD700;
+    /* Gold */
+    font-size: 1.5rem;
+}
+
+.card-award p {
+    color: var(--text-muted);
+}
+
+
+/* Security List */
+.highlight-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.highlight-list li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+.highlight-list li i {
+    color: var(--primary);
+}
+
+
+/* Mission & Vision (Dark) */
+.mission-vision {
+    background: #0f172a;
+    color: white;
+    padding: 100px 0;
+    margin-bottom: -5rem;
+    /* Remove padding bottom overlap with footer if any */
 }
 
 .mv-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
-    margin-bottom: 4rem;
+    gap: 60px;
+    margin-bottom: 80px;
 }
 
-.mv-box {
-    background: #fff;
-    padding: 3rem;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-md);
-    border-left: 5px solid var(--primary);
-    position: relative;
-    overflow: hidden;
+.mv-card-dark {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.mv-box::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100px;
-    height: 100px;
-    background: rgba(221, 84, 38, 0.05);
-    border-radius: 0 0 0 100%;
+.mv-card-dark:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-5px);
 }
 
-.mv-box h3 {
+.mv-card-dark h3 {
     font-size: 1.75rem;
-    color: var(--secondary-dark);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
     gap: 1rem;
-}
-
-.mv-box h3 i {
     color: var(--primary);
 }
 
-.mv-box p {
-    font-size: 1.05rem;
-    color: var(--text-muted);
+.mv-card-dark p {
+    color: rgba(255, 255, 255, 0.8);
     line-height: 1.7;
+    font-size: 1.1rem;
 }
 
-/* Values Grid Redesign */
-.values-header {
+
+/* Values Grid Dark */
+.values-title {
     text-align: center;
-    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: white;
 }
 
-.values-header h2 {
-    font-size: 2.25rem;
-    color: var(--text-main);
-    margin-bottom: 0.5rem;
-}
-
-.values-grid-new {
+.values-grid-dark {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
+    gap: 40px;
 }
 
-.value-item {
+.value-item-dark {
     text-align: center;
-    padding: 2rem;
-    background: #fff;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-sm);
-    transition: transform 0.3s ease;
-    border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
-.value-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--primary-light);
-}
-
-.value-icon-box {
-    width: 70px;
-    height: 70px;
-    background: rgba(31, 187, 221, 0.1);
-    color: var(--secondary);
+.value-item-dark .icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: var(--secondary-light);
+    height: 80px;
+    width: 80px;
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.75rem;
-    margin: 0 auto 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
     transition: all 0.3s ease;
 }
 
-.value-item:hover .value-icon-box {
+.value-item-dark:hover .icon {
     background: var(--primary);
-    color: #fff;
+    color: white;
+    transform: scale(1.1);
 }
 
-.value-item h4 {
+.value-item-dark h4 {
     font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-    color: var(--text-main);
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
 
-.value-item p {
-    font-size: 0.95rem;
-    color: var(--text-muted);
+.value-item-dark p {
+    color: rgba(255, 255, 255, 0.6);
     line-height: 1.6;
 }
