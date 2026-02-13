@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biaja Tours - Viajar es Vivir | Agencia de Viajes en República Dominicana</title>
+    <meta name="description"
+        content="Biaja Tours & Travels: Tu agencia para viajar seguro. Paquetes a Colombia, Perú, Turquía y Disney. Expertos en viajes corporativos y vacaciones soñadas.">
+    <meta name="keywords"
+        content="Viajar, Biaja Tours, Agencia de Viajes, Turismo, Paquetes Turisticos, Vuelos, Hoteles">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "Biaja Tours & Travels",
+      "image": "https://biajatours.com/logo.png",
+      "description": "Agencia de viajes experta en destinos internacionales y corporativos.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Principal #123",
+        "addressLocality": "Santo Domingo",
+        "addressCountry": "DO"
+      },
+      "telephone": "+18095550123",
+      "priceRange": "$$"
+    }
+    </script>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="img/logo-biaja-horizontal.png" alt="Biaja Tours" style="height: 90px;">
+            </a>
+
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link active" data-i18n="nav.home">Inicio</a>
+                <a href="nosotros.html" class="nav-link">Nosotros</a>
+                <a href="#destinos" class="nav-link" data-i18n="nav.destinations">Destinos</a>
+                <a href="paquetes.html" class="nav-link" style="color: var(--primary); font-weight:700;">Paquetes ✈️</a>
+                <a href="ofertas.html" class="nav-link" data-i18n="nav.offers">Ofertas</a>
+                <a href="#servicios" class="nav-link" data-i18n="nav.services">Servicios</a>
+                <a href="#eventos" class="nav-link" data-i18n="nav.corporate">Empresas</a>
+                <a href="#contacto" class="btn btn-primary" data-i18n="nav.contact">Contáctanos</a>
+
+                <!-- Language Toggle -->
+                <!-- Language Toggle -->
+                <div class="lang-switch">
+                    <span class="lang-opt" data-lang="es">ES</span>
+                    <span class="lang-divider">|</span>
+                    <span class="lang-opt" data-lang="en">EN</span>
+                </div>
+            </nav>
+
+            <!-- Mobile Toggle -->
+            <button class="mobile-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-bg">
+                <!-- Placeholder for Hero Image - Ideally a high quality travel collage -->
+                <img src="https://images.unsplash.com/photo-1503003378590-66f89f543bc6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Viajes mundo">
+                <div
+                    style="position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 100%);">
+                </div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <span class="hero-tag" data-i18n="hero.tag">✨ Experiencias Inovidables</span>
+                    <h1 class="title-display" data-i18n="hero.title">¿Listo para <span
+                            style="color: var(--primary);">Viajar</span>?<br>Descubre el mundo con <span
+                            style="color: var(--primary);">Biaja</span>
+                    </h1>
+                    <p class="hero-subtitle" data-i18n="hero.subtitle">Biaja Tours: Especialistas en crear momentos
+                        mágicos en Colombia, Perú,
+                        Turquía, Disney y
+                        más. Tu próxima aventura comienza aquí.</p>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="#destinos" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> <span
+                                data-i18n="hero.btn.destinations">Ver Destinos</span></a>
+                        <a href="#contacto" class="btn btn-secondary" data-i18n="hero.btn.plan">Planificar Viaje</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categorías / Servicios -->
+        <section id="servicios" class="section" style="background: #FAFAFA;">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle" data-i18n="services.subtitle">Nuestros Servicios de Viaje</span>
+                    <h2 class="title-section" data-i18n="services.title">Todo lo que necesitas para viajar con Biaja
+                    </h2>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-plane-departure"></i></div>
+                        <h3 class="service-title" data-i18n="service.flights">Vuelos Nacionales e Int.</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="service.flights.desc">Mejores
+                            tarifas a cualquier parte del
+                            mundo.
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-hotel"></i></div>
+                        <h3 class="service-title" data-i18n="service.hotels">Hoteles Exclusivos</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="service.hotels.desc">
+                            Alojamiento de lujo y confort
+                            garantizado.
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-passport"></i></div>
+                        <h3 class="service-title" data-i18n="service.visas">Visas y Seguros</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="service.visas.desc">Asesoría
+                            completa para tu tranquilidad.
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-ticket"></i></div>
+                        <h3 class="service-title" data-i18n="service.disney">Paquetes Disney</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;" data-i18n="service.disney.desc">Magia
+                            garantizada para toda la familia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Destinos Destacados -->
+        <section id="destinos" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle" data-i18n="destinations.subtitle">Explora el Mundo</span>
+                    <h2 class="title-section" data-i18n="destinations.title">Destinos Populares</h2>
+                </div>
+
+                <div class="destination-grid">
+                    <!-- Colombia -->
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?q=80&w=2070&auto=format&fit=crop"
+                                alt="Colombia">
+                            <div class="card-overlay">
+                                <h3 class="card-title">Colombia</h3>
+                                <div class="card-info">
+                                    <span><i class="fa-regular fa-clock"></i> 5 Días</span>
+                                    <span><i class="fa-solid fa-user-group"></i> Desde $890</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Peru -->
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?q=80&w=2076&auto=format&fit=crop"
+                                alt="Peru Machu Picchu">
+                            <div class="card-overlay">
+                                <h3 class="card-title">Perú</h3>
+                                <div class="card-info">
+                                    <span><i class="fa-regular fa-clock"></i> 7 Días</span>
+                                    <span><i class="fa-solid fa-user-group"></i> Desde $1,200</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Turkey -->
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?q=80&w=2071&auto=format&fit=crop"
+                                alt="Turquia Cappadocia">
+                            <div class="card-overlay">
+                                <h3 class="card-title">Turquía</h3>
+                                <div class="card-info">
+                                    <span><i class="fa-regular fa-clock"></i> 10 Días</span>
+                                    <span><i class="fa-solid fa-user-group"></i> Desde $1,800</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Disney -->
+                    <article class="card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1597466599360-3b9775841aec?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Disney World Magic Kingdom Castle">
+                            <div class="card-overlay">
+                                <h3 class="card-title">Disney World</h3>
+                                <div class="card-info">
+                                    <span><i class="fa-regular fa-clock"></i> 6 Días</span>
+                                    <span><i class="fa-solid fa-user-group"></i> Cotizar</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="paquetes.html" class="btn btn-secondary" data-i18n="destinations.btn.all">Ver todos los
+                        paquetes</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Corporate Section -->
+        <section id="eventos" class="section corporate-section">
+            <div class="container">
+                <div class="corporate-content">
+                    <div class="corporate-text">
+                        <span
+                            style="color: var(--primary); font-weight: 700; letter-spacing: 2px; display: block; margin-bottom: 1rem;"
+                            data-i18n="corporate.tag">BIAJA
+                            CORPORATE</span>
+                        <h2 class="title-display" data-i18n="corporate.title">Eventos y Viajes Empresariales</h2>
+                        <p style="color: #9CA3AF; margin-bottom: 2rem; font-size: 1.1rem;" data-i18n="corporate.desc">
+                            Gestionamos la logística integral de tus viajes de negocios, convenciones y viajes de
+                            incentivo.
+                            Servicio personalizado 24/7 para que tu equipo solo se preocupe por el éxito.
+                        </p>
+                        <ul style="margin-bottom: 2rem; display: grid; gap: 1rem;">
+                            <li style="display: flex; gap: 1rem; align-items: center;"><i class="fa-solid fa-check"
+                                    style="color: var(--primary);"></i> <span data-i18n="corporate.list.1">Gestión de
+                                    vuelos y alojamiento corporativo</span></li>
+                            <li style="display: flex; gap: 1rem; align-items: center;"><i class="fa-solid fa-check"
+                                    style="color: var(--primary);"></i> <span data-i18n="corporate.list.2">Organización
+                                    de eventos y congresos</span></li>
+                            <li style="display: flex; gap: 1rem; align-items: center;"><i class="fa-solid fa-check"
+                                    style="color: var(--primary);"></i> <span data-i18n="corporate.list.3">Facturación
+                                    consolidada</span></li>
+                        </ul>
+                        <a href="#contacto" class="btn btn-primary" data-i18n="corporate.btn">Cotizar Evento</a>
+                    </div>
+                    <div class="corporate-image">
+                        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=2069&auto=format&fit=crop"
+                            alt="Eventos Corporativos">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacto" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle" data-i18n="contact.subtitle">Hablemos</span>
+                    <h2 class="title-section" data-i18n="contact.title">Empieza tu aventura</h2>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;" data-i18n="contact.info.title">Información
+                            de Contacto</h3>
+                        <p style="margin-bottom: 2rem; color: var(--text-muted);" data-i18n="contact.info.desc">Estamos
+                            listos para planificar tus
+                            próximas vacaciones o evento empresarial.</p>
+
+                        <div style="margin-bottom: 1.5rem; display: flex; gap: 1rem; align-items: flex-start;">
+                            <div
+                                style="width: 40px; height: 40px; background: var(--secondary); color:#fff; border-radius: 50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 style="font-weight: 700;" data-i18n="contact.visit">Visítanos</h4>
+                                <p style="font-size: 0.9rem;">Av. Principal #123, Santo Domingo</p>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 1.5rem; display: flex; gap: 1rem; align-items: flex-start;">
+                            <div
+                                style="width: 40px; height: 40px; background: var(--secondary); color:#fff; border-radius: 50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 style="font-weight: 700;" data-i18n="contact.call">Llámanos</h4>
+                                <p style="font-size: 0.9rem;">+1 (809) 555-0123</p>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 1.5rem; display: flex; gap: 1rem; align-items: flex-start;">
+                            <div
+                                style="width: 40px; height: 40px; background: var(--secondary); color:#fff; border-radius: 50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 style="font-weight: 700;" data-i18n="contact.write">Escríbenos</h4>
+                                <p style="font-size: 0.9rem;">info@biajatours.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="custom-form-container">
+                        <form id="contactForm" class="contact-form">
+                            <!-- Honeypot (Spam Protection) -->
+                            <div style="display: none; visibility: hidden; opacity: 0; position: absolute;">
+                                <label for="website">Si eres humano, deja este campo vacío</label>
+                                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                            </div>
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="nombre" class="static-label" data-i18n="form.name">Nombre
+                                        Completo</label>
+                                    <div class="input-with-icon">
+                                        <input type="text" id="nombre" name="nombre" class="form-control"
+                                            placeholder="Tu nombre" data-i18n-placeholder="form.name.placeholder"
+                                            required>
+                                        <i class="fa-solid fa-user input-icon-right"></i>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefono" class="static-label" data-i18n="form.phone">Teléfono</label>
+                                    <div class="input-with-icon">
+                                        <input type="tel" id="telefono" name="telefono" class="form-control"
+                                            placeholder="(000) 000-0000" data-i18n-placeholder="form.phone.placeholder"
+                                            required>
+                                        <i class="fa-solid fa-phone input-icon-right"></i>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- Company (using grid manually for this example to match look, but keeping email full width usually better. 
+                            The image showed Company next to name, but requested structure was Name-Phone. 
+                            Let's follow: Name-Phone / Email / Interest / Message) -->
+
+                            <div class="form-group">
+                                <label for="email" class="static-label" data-i18n="form.email">Correo
+                                    Electrónico</label>
+                                <div class="input-with-icon">
+                                    <input type="email" id="email" name="email" class="form-control"
+                                        placeholder="tucorreo@ejemplo.com"
+                                        data-i18n-placeholder="form.email.placeholder" required>
+                                    <i class="fa-solid fa-envelope input-icon-right"></i>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="interes" class="static-label" data-i18n="form.interest">Interés</label>
+                                <div class="select-wrapper">
+                                    <select id="interes" name="interes" class="form-control">
+                                        <option value="" disabled selected data-i18n="form.interest.default">Selecciona
+                                            una opción...</option>
+                                        <option value="Planificar Vacaciones" data-i18n="form.interest.vacation">
+                                            Planificar Vacaciones</option>
+                                        <option value="Viaje Corporativo" data-i18n="form.interest.corporate">Viaje
+                                            Corporativo / Evento</option>
+                                        <option value="Vuelos" data-i18n="form.interest.flights">Cotización de Vuelos
+                                        </option>
+                                        <option value="Disney" data-i18n="form.interest.disney">Disney World</option>
+                                        <option value="Otro" data-i18n="form.interest.other">Otro</option>
+                                    </select>
+                                    <i class="fa-solid fa-chevron-down select-icon"></i>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="mensaje" class="static-label" data-i18n="form.message">Mensaje</label>
+                                <textarea id="mensaje" name="mensaje" class="form-control"
+                                    placeholder="¿A dónde quieres ir?" data-i18n-placeholder="form.message.placeholder"
+                                    required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary submit-btn">
+                                <span data-i18n="form.btn.submit">Solicitar Diagnóstico</span> <i
+                                    class="fa-solid fa-paper-plane"></i>
+                                <div class="loader"></div>
+                            </button>
+
+                            <div id="form-message" class="form-message"></div>
+                        </form>
+                    </div>
+
+                    <script>
+                        document.getElementById('contactForm').addEventListener('submit', function (e) {
+                            e.preventDefault();
+
+                            const btn = this.querySelector('.submit-btn');
+                            const msg = document.getElementById('form-message');
+
+                            // Loading State
+                            btn.classList.add('loading');
+                            btn.disabled = true;
+
+                            const formData = {
+                                nombre: document.getElementById('nombre').value,
+                                telefono: document.getElementById('telefono').value,
+                                email: document.getElementById('email').value,
+                                interes: document.getElementById('interes').value,
+                                mensaje: document.getElementById('mensaje').value,
+                                website: document.getElementById('website').value // Spam Trap
+                            };
+
+                            fetch('contact.php', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify(formData)
+                            })
+                                .then(response => response.json())
+                                .then(data => {
+                                    if (data.success) {
+                                        msg.className = 'form-message success';
+                                        msg.innerHTML = '<i class="fa-solid fa-circle-check"></i> ' + data.message;
+                                        this.reset();
+                                    } else {
+                                        throw new Error(data.message || 'Error desconocido');
+                                    }
+                                })
+                                .catch(error => {
+                                    msg.className = 'form-message error';
+                                    msg.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i> ' + ('Hubo un error al enviar. Intenta por WhatsApp.');
+                                })
+                                .finally(() => {
+                                    btn.classList.remove('loading');
+                                    btn.disabled = false;
+                                    setTimeout(() => {
+                                        msg.style.opacity = '0';
+                                        setTimeout(() => msg.innerHTML = '', 300);
+                                        msg.style.opacity = '1';
+                                    }, 5000);
+                                });
+                        });
+                    </script>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div>
+                        <a href="#" class="logo footer-logo">
+                            <img src="img/logo-white.png" alt="Biaja Tours">
+                        </a>
+                        <p style="opacity: 0.7; margin-bottom: 1.5rem;" data-i18n="footer.desc">
+                            Hacemos realidad tus sueños de viaje con un servicio de primera clase y destinos
+                            inolvidables.
+                        </p>
+                        <div class="social-links">
+                            <a href="https://instagram.com/biajatours" class="social-link" target="_blank"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="https://web.facebook.com/profile.php?id=100010878701252" class="social-link"
+                                target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://www.youtube.com/channel/UCKnWQNuFUoVoP06tVngGulA" class="social-link"
+                                target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 style="color: #fff; margin-bottom: 1.5rem; font-size: 1.1rem;"
+                            data-i18n="footer.links.title">Enlaces Rápidos</h4>
+                        <ul class="footer-links">
+                            <li><a href="#home" data-i18n="nav.home">Inicio</a></li>
+                            <li><a href="#destinos" data-i18n="nav.destinations">Destinos</a></li>
+                            <li><a href="#servicios" data-i18n="nav.services">Servicios</a></li>
+                            <li><a href="#eventos" data-i18n="nav.corporate">Eventos</a></li>
+                            <li><a href="admin.html">Admin</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 style="color: #fff; margin-bottom: 1.5rem; font-size: 1.1rem;"
+                            data-i18n="footer.destinations.title">Destinos Top</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Colombia Magica</a></li>
+                            <li><a href="#">Perú Ancestral</a></li>
+                            <li><a href="#">Turquía Inolvidable</a></li>
+                            <li><a href="#">Disney World</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 style="color: #fff; margin-bottom: 1.5rem; font-size: 1.1rem;"
+                            data-i18n="footer.subscribe.title">Suscríbete</h4>
+                        <p style="opacity: 0.7; margin-bottom: 1rem; font-size: 0.9rem;"
+                            data-i18n="footer.subscribe.desc">Recibe ofertas exclusivas en tu
+                            correo.</p>
+                        <form style="display: flex;">
+                            <input type="email" placeholder="Email"
+                                style="padding: 0.75rem; border:none; border-radius: var(--radius-sm) 0 0 var(--radius-sm); outline: none; width: 100%;">
+                            <button
+                                style="background: var(--primary); color: #fff; border:none; padding: 0 1rem; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; cursor: pointer;"><i
+                                    class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <div style="text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; opacity: 0.5; font-size: 0.9rem;"
+                    data-i18n="footer.copyright">
+                    &copy; 2026 Biaja Tours & Travels. Todos los derechos reservados.
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/translations.js"></script>
+        <script src="script.js"></script>
+        <a href="https://wa.me/18094225371" class="whatsapp-float" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+</body>
+
+</html>

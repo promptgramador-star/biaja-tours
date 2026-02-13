@@ -1,0 +1,24 @@
+RewriteEngine On
+RewriteBase /
+DirectoryIndex index.html
+
+# Don't rewrite files or directories
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Rewrite everything else to index.html or server.js? 
+# Actually, for a Node app on Hostinger, we usually want to defer to the Node app
+# But typically Hostinger uses Passenger or similar. 
+# A common pattern is to just have the .htaccess if they use standard Apache proxying.
+# If they use 'Setup Node.js App' feature, it creates its own.
+# Let's try a standard SPA rewrite first, but since we have an API...
+
+# Rewrite API calls to the local server port if using a reverse proxy setup isn't automatic
+# But we can't do port forwarding easily here without mod_proxy enabled and configured by user.
+# IMPORTANT: Hostinger "Setup Node.js App" usually handles the port binding.
+# We just need to ensure the requests aren't blocked.
+
+Options +FollowSymLinks
+AllowOverride All
+Require all granted

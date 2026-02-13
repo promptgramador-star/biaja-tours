@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paquetes Destacados | Biaja Tours</title>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="import" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap">
+</head>
+
+<body>
+
+    <!-- Header (Consistent with Index) -->
+    <header class="header static-dark">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="img/logo-biaja-horizontal.png" alt="Biaja Tours" style="height: 90px;">
+            </a>
+
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link" data-i18n="nav.home">Inicio</a>
+                <a href="nosotros.html" class="nav-link">Nosotros</a>
+                <a href="index.html#destinos" class="nav-link" data-i18n="nav.destinations">Destinos</a>
+                <a href="paquetes.html" class="nav-link active" style="color: var(--primary); font-weight:700;">Paquetes
+                    ✈️</a>
+                <a href="index.html#servicios" class="nav-link" data-i18n="nav.services">Servicios</a>
+                <a href="index.html#eventos" class="nav-link" data-i18n="nav.corporate">Empresas</a>
+                <a href="index.html#contacto" class="btn btn-primary" data-i18n="nav.contact">Contáctanos</a>
+
+                <!-- Language Toggle -->
+                <div class="lang-switch">
+                    <span class="lang-opt" data-lang="es">ES</span>
+                    <span class="lang-divider">|</span>
+                    <span class="lang-opt" data-lang="en">EN</span>
+                </div>
+            </nav>
+
+            <!-- Mobile Toggle -->
+            <button class="mobile-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main style="padding-top: 80px;">
+        <!-- Packages Section (Refined) -->
+        <section class="paquetes-section">
+            <div class="container">
+                <span class="section-subtitle">Viaja con Nosotros</span>
+                <h2 class="title-section">Explora Nuestros Paquetes</h2>
+
+                <div class="paquetes-grid">
+
+                    <!-- Card 1: Perú -->
+                    <div class="paquete-card">
+                        <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?q=80&w=2070&auto=format&fit=crop"
+                            alt="Machu Picchu Peru">
+
+                        <div class="paquete-content">
+                            <h3>Perú Mágico</h3>
+                            <p class="duracion">5 días / 4 noches</p>
+
+                            <div class="precio">
+                                <span>Desde</span>
+                                <strong>USD $899</strong>
+                            </div>
+
+                            <ul>
+                                <li><i class="fa-solid fa-check"></i> Hotel Superior incluido</li>
+                                <li><i class="fa-solid fa-check"></i> Traslados Aeropuerto</li>
+                                <li><i class="fa-solid fa-check"></i> Tour Machu Picchu</li>
+                            </ul>
+
+                            <button class="btn-reservar" onclick="reservar('pkg_peru_01')">
+                                Reservar Ahora
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Colombia -->
+                    <div class="paquete-card">
+                        <img src="https://images.unsplash.com/photo-1583531352515-8884af319dc1?q=80&w=2070&auto=format&fit=crop"
+                            alt="Cartagena Colombia">
+
+                        <div class="paquete-content">
+                            <h3>Colombia Caribe</h3>
+                            <p class="duracion">4 días / 3 noches</p>
+
+                            <div class="precio">
+                                <span>Desde</span>
+                                <strong>USD $699</strong>
+                            </div>
+
+                            <ul>
+                                <li><i class="fa-solid fa-check"></i> Hotel frente al mar</li>
+                                <li><i class="fa-solid fa-check"></i> Desayunos incluidos</li>
+                                <li><i class="fa-solid fa-check"></i> City Tour Cartagena</li>
+                            </ul>
+
+                            <button class="btn-reservar" onclick="reservar('pkg_col_02')">
+                                Reservar Ahora
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Disney -->
+                    <div class="paquete-card">
+                        <img src="https://i.imgur.com/BMdieBg.jpg"
+                            alt="Disney Castle">
+
+                        <div class="paquete-content">
+                            <h3>Disney Experience</h3>
+                            <p class="duracion">6 días / 5 noches</p>
+
+                            <div class="precio">
+                                <span>Desde</span>
+                                <strong>USD $1,499</strong>
+                            </div>
+
+                            <ul>
+                                <li><i class="fa-solid fa-check"></i> Hotel Resort Disney</li>
+                                <li><i class="fa-solid fa-check"></i> Entradas 4 Parques</li>
+                                <li><i class="fa-solid fa-check"></i> Transporte incluido</li>
+                            </ul>
+
+                            <button class="btn-reservar" onclick="reservar('pkg_disney_03')">
+                                Reservar Ahora
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Simplified) -->
+    <footer class="footer">
+        <div class="container">
+            <div style="text-align: center; color: rgba(255,255,255,0.7); font-size: 0.9rem;">
+                &copy; 2026 Biaja Tours & Travels. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="script.js"></script>
+    <a href="https://wa.me/18094225371" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+</body>
+
+</html>
