@@ -29,16 +29,25 @@
     <header class="header">
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="img/logo.png" alt="Biaja Logo" style="height: 40px;">
+                <img src="img/logo-biaja-horizontal.png" alt="Biaja Tours" style="height: 90px;">
             </a>
 
             <nav class="nav-menu">
-                <a href="index.html" class="nav-link">Inicio</a>
-                <a href="index.html#destinos" class="nav-link">Destinos</a>
-                <a href="ofertas.php" class="nav-link active" style="color: var(--primary);">Ofertas</a>
-                <a href="index.html#servicios" class="nav-link">Servicios</a>
-                <a href="index.html#eventos" class="nav-link">Empresas</a>
-                <a href="index.html#contacto" class="btn btn-primary">Contáctanos</a>
+                <a href="index.html" class="nav-link" data-i18n="nav.home">Inicio</a>
+                <a href="nosotros.html" class="nav-link">Nosotros</a>
+                <a href="index.html#destinos" class="nav-link" data-i18n="nav.destinations">Destinos</a>
+                <a href="paquetes.html" class="nav-link" style="color: var(--primary); font-weight:700;">Paquetes ✈️</a>
+                <a href="ofertas.php" class="nav-link active" data-i18n="nav.offers">Ofertas</a>
+                <a href="index.html#servicios" class="nav-link" data-i18n="nav.services">Servicios</a>
+                <a href="index.html#eventos" class="nav-link" data-i18n="nav.corporate">Empresas</a>
+                <a href="index.html#contacto" class="btn btn-primary" data-i18n="nav.contact">Contáctanos</a>
+
+                <!-- Language Toggle -->
+                <div class="lang-switch">
+                    <span class="lang-opt" data-lang="es">ES</span>
+                    <span class="lang-divider">|</span>
+                    <span class="lang-opt" data-lang="en">EN</span>
+                </div>
             </nav>
 
             <!-- Mobile Toggle -->
