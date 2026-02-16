@@ -68,8 +68,9 @@
             </div>
             <div class="container">
                 <div class="hero-content" style="padding-top: 0; text-align: center; margin: 0 auto;">
-                    <h1 class="title-display" style="margin-bottom: 0;">Ofertas Exclusivas</h1>
-                    <p class="hero-subtitle" style="margin: 1rem auto 0;">Tus vacaciones soñadas al mejor precio</p>
+                    <h1 class="title-display" style="margin-bottom: 0;" data-i18n="offers.title">Ofertas Exclusivas</h1>
+                    <p class="hero-subtitle" style="margin: 1rem auto 0;" data-i18n="offers.subtitle">Tus vacaciones
+                        soñadas al mejor precio</p>
                 </div>
             </div>
         </section>
@@ -168,7 +169,7 @@
                                             {$content}
                                         </div>
                                         <a href='https://wa.me/18094225371?text=Hola, me interesa la oferta: {$title}' target='_blank' class='offer-btn'>
-                                            <i class='fa-brands fa-whatsapp'></i> Más Información
+                                            <i class='fa-brands fa-whatsapp'></i> <span data-i18n='offers.btn.info'>Más Información</span>
                                         </a>
                                     </div>
                                 </article>
@@ -176,12 +177,12 @@
                             }
                         } else {
                             echo "<div style='grid-column: 1/-1; text-align: center; padding: 3rem;'>
-                                    <h3>No hay ofertas activas en este momento.</h3>
-                                    <p>Vuelve pronto para ver nuestras promociones.</p>
+                                    <h3 data-i18n='offers.empty'>No hay ofertas activas en este momento.</h3>
+                                    <p data-i18n='offers.empty.desc'>Vuelve pronto para ver nuestras promociones.</p>
                                   </div>";
                         }
                     } else {
-                        echo "<p>Error: No se pudo cargar la base de datos de ofertas.</p>";
+                        echo "<p data-i18n='offers.error'>Error: No se pudo cargar la base de datos de ofertas.</p>";
                     }
                     ?>
                 </div>
@@ -200,6 +201,7 @@
         </div>
     </footer>
 
+    <script src="js/translations.js"></script>
     <script src="script.js"></script>
     <script>
         // Legacy DB logic removed for Instagram integration
