@@ -1,2 +1,2 @@
-# biaja
+# Biaja Tours
 WebSite de Biaja Tours
